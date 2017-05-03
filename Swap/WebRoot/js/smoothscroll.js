@@ -18,7 +18,7 @@ var ss = {
       var lnk = allLinks[i];
       if ((lnk.href && lnk.href.indexOf('#') != -1) && 
           ( (lnk.pathname == location.pathname) ||
-	    ('/'+lnk.pathname == location.pathname) ) && 
+        ('/'+lnk.pathname == location.pathname) ) && 
           (lnk.search == location.search)) {
         // If the link is internal to the page (begins in #)
         // then attach the smoothScroll function as an onclick

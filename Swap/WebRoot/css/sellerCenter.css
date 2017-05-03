@@ -1,228 +1,228 @@
 peopledata13a:hover {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 /*店主信息*/
 .shopman_info{
-	float: left;
-	width: 510px;
-	min-height: 293px;
-	background-color:white;
-	border: 1px solid #DDDDDD;
-	border-radius: 4px 4px 0 0;
+    float: left;
+    width: 510px;
+    min-height: 293px;
+    background-color:white;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px 4px 0 0;
 }
 .shopman_info_head{
-	height: 50px;
-	padding-top: 10px;
-	border-radius: 4px 4px 0 0;
-	background-image: linear-gradient(to bottom, #357EBD, #088EF0);
-	font-size: 20px;
-	text-align: center;
-	font-family: "黑体";
-	color: white;
+    height: 50px;
+    padding-top: 10px;
+    border-radius: 4px 4px 0 0;
+    background-image: linear-gradient(to bottom, #357EBD, #088EF0);
+    font-size: 20px;
+    text-align: center;
+    font-family: "黑体";
+    color: white;
 }
 
 .shopman_info_div1 {
-	min-height: 200px;
-	float: left;
-	width: 250px;
+    min-height: 200px;
+    float: left;
+    width: 250px;
 }
 .shopman_info_div1 .peopledata11 {
-	min-height: 120px;
-	width: 100px;
-	height: 100px;
-	margin-top: 10px;
-	margin-left: 10px;
-	float: left;
+    min-height: 120px;
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
 }
 
 .shopman_info_div1 .peopledata11 img{
-	width: 90px;
-	height: 90px;
+    width: 90px;
+    height: 90px;
 }
 .shopman_info_div1 .peopledata12{
-	float: left;
-	margin-top: 10px;
-	margin-left: 5px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 5px;
 }
 .shopman_info_div1 .peopledata12 p{
-	font-size: 16px;
-	font-weight: 600;
-	width: 135px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+    font-size: 16px;
+    font-weight: 600;
+    width: 135px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .shopman_info_div1 .peopledata12 p span{
-	font-size: 14px;
-	font-weight: 500;
+    font-size: 14px;
+    font-weight: 500;
 }
 .shopman_info_div1 .peopledata13{
-	float: left;
-	margin-top: -10px;
-	margin-left: 10px;
-	font-size: 15px;
-	color: #5E5E5E;
-	font-weight: 500;
+    float: left;
+    margin-top: -10px;
+    margin-left: 10px;
+    font-size: 15px;
+    color: #5E5E5E;
+    font-weight: 500;
 }
 .shopman_info_div1 .peopledata13 p{
-	margin-top: 5px;
+    margin-top: 5px;
 }
 .shopman_info_div1 .pubInfo {
-	color: #F58400;
-	line-height: 15px;
+    color: #F58400;
+    line-height: 15px;
 }
 .shopman_info_div1 .pubInfo marquee{
-	color: #333;
-	width: 210px;
-	overflow: hidden;
-	font-size: 15px;
+    color: #333;
+    width: 210px;
+    overflow: hidden;
+    font-size: 15px;
 }
 .shopman_info_div2{
-	float: left;
-	width: 250px;
-	min-height: 200px;
-	margin-top: 10px;
+    float: left;
+    width: 250px;
+    min-height: 200px;
+    margin-top: 10px;
 }
 .shopman_info_div2 p span{
-	font-size: 16px;
-	font-weight: 500;
-	
+    font-size: 16px;
+    font-weight: 500;
+    
 }.shopman_info_div2 p{
-	display: block;
-	width: 95%;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+    display: block;
+    width: 95%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .shopman_info_div2 .goodsspan{
-	display:inline-block;
-	width:35px;
-	height:35px;
-	text-align:center;
-	padding-top:7px;
-	background-color: #0888E6;
-	margin-left: 20px;
-	border-radius: 50%;
-	color: white;
+    display:inline-block;
+    width:35px;
+    height:35px;
+    text-align:center;
+    padding-top:7px;
+    background-color: #0888E6;
+    margin-left: 20px;
+    border-radius: 50%;
+    color: white;
 }
 .shopman_info_div3{
-	margin-left: 10px;
-	margin-bottom: 10px;
-	font-size: 15px;
-	color: #666666;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #666666;
 }
 .shopman_span1{
-	margin-right: 20px;
-	cursor: default;
+    margin-right: 20px;
+    cursor: default;
 }
 
 .shopman_span2{
-	color: #5E5E5E;
+    color: #5E5E5E;
 }
 .shopman_span3{
-	color: #F58400;
+    color: #F58400;
 }
 
 /*店主信用评论*/
 .shopcredit_info{
-	float: left;
-	width: 450px;
-	min-height: 293px;
-	background-color:white;
-	border: 1px solid #DDDDDD;
-	margin-left: 20px;
-	border-radius: 4px 4px 0 0;
+    float: left;
+    width: 450px;
+    min-height: 293px;
+    background-color:white;
+    border: 1px solid #DDDDDD;
+    margin-left: 20px;
+    border-radius: 4px 4px 0 0;
 }
 .shopcredit_info_head{
-	height: 50px;
-	border-radius: 4px 4px 0 0;
-	background-image: linear-gradient(to bottom, #357EBD, #088EF0);
-	font-size: 20px;
-	text-align: center;
-	font-family: "黑体";
-	color: white;
+    height: 50px;
+    border-radius: 4px 4px 0 0;
+    background-image: linear-gradient(to bottom, #357EBD, #088EF0);
+    font-size: 20px;
+    text-align: center;
+    font-family: "黑体";
+    color: white;
 }
 .shopcredit_info_head li{
-	margin-left: -2px;
+    margin-left: -2px;
 }
 .shopcredit_info_head li a:hover{
-	color: #357EBD;
+    color: #357EBD;
 }
 .shopcredit_info_head li a{
-	color: white;
+    color: white;
 }
 .shopcredit_info_div1{
-	float: left;
-	font-size: 18px;
-	margin-left: 10px;
-	margin-top: 70px;
+    float: left;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-top: 70px;
 }
 
 
 /*店铺上架商品*/
 .goods_info_head{
-	height: 50px;
-	border-radius: 4px 4px 0 0;
-	background-image: linear-gradient(to bottom, #F9A123, #F58400);
-	font-size: 20px;
-	font-family: "黑体";
-	color: white;
-	text-align: center;
-	padding-top: 10px;
+    height: 50px;
+    border-radius: 4px 4px 0 0;
+    background-image: linear-gradient(to bottom, #F9A123, #F58400);
+    font-size: 20px;
+    font-family: "黑体";
+    color: white;
+    text-align: center;
+    padding-top: 10px;
 }
 .goods_info_div0{
-	border: 1px solid #DDDDDD;
-	width: 500px;
-	height: 200px;
-	background-color: white;
-	float: left;
-	margin-left: 7px;
-	margin-bottom: 7px;
+    border: 1px solid #DDDDDD;
+    width: 500px;
+    height: 200px;
+    background-color: white;
+    float: left;
+    margin-left: 7px;
+    margin-bottom: 7px;
 }
 .goods_info_div1{
-	width: 290px;
-	height: 200px;
-	float: left;
-	padding-top: 15px;
-	padding-left: 15px;
-}	
+    width: 290px;
+    height: 200px;
+    float: left;
+    padding-top: 15px;
+    padding-left: 15px;
+}    
 .goods_info_div1 p {
-	height: 25px;
-	margin-left: 5px;
-	padding-bottom: 5px;
-	display: block;
-	width: 95%;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+    height: 25px;
+    margin-left: 5px;
+    padding-bottom: 5px;
+    display: block;
+    width: 95%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .goods_info_div1 p span {
-	font-size: 17px;
-	font-weight: 600;
-	font-family: "仿宋";
+    font-size: 17px;
+    font-weight: 600;
+    font-family: "仿宋";
 }
 
 .goods_info_div1 p span:hover {
-	font-size: 18px;
-	font-weight: 700;
+    font-size: 18px;
+    font-weight: 700;
 }
 .goods_info_div2 span{
-	margin-top: 15px;
-	color: #0088CC;	
-	margin-left: 5px;
-	margin-right: 15px;
+    margin-top: 15px;
+    color: #0088CC;    
+    margin-left: 5px;
+    margin-right: 15px;
 }
 .goods_info_div2 span i{
-	color: #868686;	
+    color: #868686;    
 }
 .goods_info_div2 a{
-	float: right;
-	margin-top: 10px;
+    float: right;
+    margin-top: 10px;
 }
 .goods_info_imgs{
-	float: left;
+    float: left;
   overflow:hidden;
 }
 .goods_info_imgs img{

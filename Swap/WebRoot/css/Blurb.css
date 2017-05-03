@@ -1,307 +1,307 @@
 /*具体商品信息*/
 
 .oneblurbone {
-	width: 1245px;
-	padding: 0px;
-	margin-top: 30px;
-	padding-left: 50px;
+    width: 1245px;
+    padding: 0px;
+    margin-top: 30px;
+    padding-left: 50px;
 }
 
 
 /*图片信息*/
 
 .oneblurb {
-	position: relative;
-	width: 400px;
-	height: 350px;
-	float: left;
-	margin-left: 20px;
-	overflow: hidden;
+    position: relative;
+    width: 400px;
+    height: 350px;
+    float: left;
+    margin-left: 20px;
+    overflow: hidden;
 }
 
 .oneblurb1 img {
-	border: 0;
-	width: 400px;
-	height: 350px;
+    border: 0;
+    width: 400px;
+    height: 350px;
 }
 
 .oneblurb ul.oneblurb1 {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 1;
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 .oneblurb ul.oneblurb1 li {
-	position: absolute;
-	margin-top: 0px;
+    position: absolute;
+    margin-top: 0px;
 }
 
 .oneblurb ul.oneblurb1 li a {
-	line-height: 0px;
-	display: block;
+    line-height: 0px;
+    display: block;
 }
 
 .oneblurb .oneblurb_1,
 .oneblurb .oneblurb_2 {
-	position: absolute;
-	top: 55%;
-	z-index: 2;
-	width: 35px;
-	height: 50px;
-	margin-top: -35px;
-	border-radius: 3px;
-	opacity: .15;
-	background: red;
-	text-indent: -9999px;
-	background-repeat: no-repeat;
-	transition: opacity .2s linear 0s;
+    position: absolute;
+    top: 55%;
+    z-index: 2;
+    width: 35px;
+    height: 50px;
+    margin-top: -35px;
+    border-radius: 3px;
+    opacity: .15;
+    background: red;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    transition: opacity .2s linear 0s;
 }
 
 .oneblurb .oneblurb_1 {
-	left: 5px;
-	background: url(../img/arrow-left.png) #000 50% no-repeat;
+    left: 5px;
+    background: url(../img/arrow-left.png) #000 50% no-repeat;
 }
 
 .oneblurb .oneblurb_2 {
-	right: 5px;
-	background: url(../img/arrow-right.png) #000 50% no-repeat;
+    right: 5px;
+    background: url(../img/arrow-right.png) #000 50% no-repeat;
 }
 
 .oneblurb2 {
-	position: absolute;
-	left: 50%;
-	bottom: 12px;
-	z-index: 30;
+    position: absolute;
+    left: 50%;
+    bottom: 12px;
+    z-index: 30;
 }
 
 .oneblurb2 ul {
-	height: 20px;
-	padding: 0 4px;
-	border-radius: 8px;
-	background: rgba(0, 0, 0, 0.5);
+    height: 20px;
+    padding: 0 4px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .oneblurb2 ul li {
-	float: left;
-	height: 12px;
-	margin: 4px 4px;
+    float: left;
+    height: 12px;
+    margin: 4px 4px;
 }
 
 .oneblurb2 ul li em {
-	display: block;
-	width: 12px;
-	height: 12px;
-	border-radius: 100%;
-	background-color: #FFFFFF;
-	text-indent: -9999px;
-	cursor: pointer;
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background-color: #FFFFFF;
+    text-indent: -9999px;
+    cursor: pointer;
 }
 
 .oneblurb2 ul li.current em {
-	background-color: #fe6500;
+    background-color: #fe6500;
 }
 
 .oneblurb2 ul li em:hover {
-	background-color: #fe6500;
+    background-color: #fe6500;
 }
 
 
 /*商品信息*/
 
 .oneblurb_blurb {
-	width: 400px;
-	height: 350px;
-	float: left;
-	border-right: 2px solid #DDDDDD;
-	margin-left: 20px;
-	border: 1px solid #DDDDDD
+    width: 400px;
+    height: 350px;
+    float: left;
+    border-right: 2px solid #DDDDDD;
+    margin-left: 20px;
+    border: 1px solid #DDDDDD
 }
 
 .oneblurb_blurb_1 {
-	padding: 10px;
-	text-align: center;
-	font-size: 17px;
-	font-weight: 800;
-	border-bottom: 1px solid #DDDDDD;
+    padding: 10px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 800;
+    border-bottom: 1px solid #DDDDDD;
 }
 .peopledata {
-	height: 50px;
-	border-radius: 4px 4px 0 0;
-	background-image: linear-gradient(to bottom, #F58400, #F49F01);
-	font-size: 20px;
-	padding-top:10px ;
-	text-align: center;
-	font-family: "黑体";
-	color: white;
+    height: 50px;
+    border-radius: 4px 4px 0 0;
+    background-image: linear-gradient(to bottom, #F58400, #F49F01);
+    font-size: 20px;
+    padding-top:10px ;
+    text-align: center;
+    font-family: "黑体";
+    color: white;
 }
 
 .oneblurb_blurb_2 {
-	padding: 10px;
-	min-height: 240px;
+    padding: 10px;
+    min-height: 240px;
 }
 
 .oneblurb_blurb_2 p {
-	height: 25px;
-	margin-left: 5px;
-	padding-bottom: 5px;
-	display: block;
-	width: 95%;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+    height: 25px;
+    margin-left: 5px;
+    padding-bottom: 5px;
+    display: block;
+    width: 95%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .oneblurb_blurb_2 p span {
-	font-size: 17px;
-	font-weight: 600;
-	font-family: "仿宋";
+    font-size: 17px;
+    font-weight: 600;
+    font-family: "仿宋";
 }
 
 .oneblurb_blurb_2 p span:hover {
-	font-size: 18px;
-	font-weight: 700;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .oneblurb_blurb_2 .oneblurb_click_a{
-	color:#aaa;
-	outline:none;
-	text-decoration:none;
+    color:#aaa;
+    outline:none;
+    text-decoration:none;
 }
 .oneblurb_blurb_2 .click_up:hover{
-	font-size: 16px;
+    font-size: 16px;
 }
 .oneblurb_blurb_2 .click_down:hover{
-	font-size: 16px;
+    font-size: 16px;
 }
 
 
 .oneblurb_blurb_21{
-	padding-left: 20px;
-	padding-bottom: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
 }
 .oneblurb_blurb_21 span{
-	font-size: 10px;
+    font-size: 10px;
 }
 
 .oneblurb_blurb_3 {
-	font-size: 15px;
-	font-weight: 500;
-	font-family: "仿宋";
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "仿宋";
 }
 
 .blurbGoods_1 {
-	margin-left: 20px;
-	color: #0088CC;
+    margin-left: 20px;
+    color: #0088CC;
 }
 
 .blurbGoods_1 i,
 .blurbGoods_2 i {
-	color: #868686;
+    color: #868686;
 }
 
 .blurbGoods_2 {
-	float: right;
-	margin-left: 20px;
-	color: #0088CC;
+    float: right;
+    margin-left: 20px;
+    color: #0088CC;
 }
 
 .blurb_span1 {
-	margin-left: 20px;
-	margin-right: 20px;
-	cursor: default;
-	float: right;
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: default;
+    float: right;
 }
 
 .blurb_span2 {
-	color: #5E5E5E;
+    color: #5E5E5E;
 }
 
 .blurb_span3 {
-	color: #F58400;
+    color: #F58400;
 }
 
 
 /*用户信息*/
 
 .oneblurb_blurb_blurb {
-	float: left;
-	width: 250px;
-	margin-left: 20px;
+    float: left;
+    width: 250px;
+    margin-left: 20px;
 }
 
 .peopledata1 {
-	background-color: white;
-	width: 250px;
+    background-color: white;
+    width: 250px;
 }
 .peopledata11 {
-	height: 50px;
-	padding-top: 10px;
-	border-radius: 4px 4px 0 0;
-	background-image: linear-gradient(to bottom, #357EBD, #088EF0);
-	font-size: 20px;
-	text-align: center;
-	font-family: "黑体";
-	color: white;
+    height: 50px;
+    padding-top: 10px;
+    border-radius: 4px 4px 0 0;
+    background-image: linear-gradient(to bottom, #357EBD, #088EF0);
+    font-size: 20px;
+    text-align: center;
+    font-family: "黑体";
+    color: white;
 }
 .peopledata1 .peopledata1_1 {
-	width: 80px;
-	height: 80px;
-	margin-top: 10px;
-	margin-left: 15px;
-	float: left;
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+    margin-left: 15px;
+    float: left;
 }
 
 .peopledata1 .peopledata1_1 img {
-	width: 70px;
-	height: 70px;
+    width: 70px;
+    height: 70px;
 }
 .peopledata1 .peopledata1_2{
-	float: left;
-	margin-top: 5px;
-	margin-left: 10px;
+    float: left;
+    margin-top: 5px;
+    margin-left: 10px;
 }
 .peopledata1 .peopledata1_2 p{
-	font-size: 16px;
-	font-weight: 600;
-	margin: 3px;
-	padding: 0px;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 3px;
+    padding: 0px;
 }
 .peopledata1 .peopledata1_2 p span{
-	color: #5E5E5E;
-	font-size: 14px;
-	font-weight: 500;
+    color: #5E5E5E;
+    font-size: 14px;
+    font-weight: 500;
 }
 .oneblurb_blurb_blurb .peopledata2{
-	background-color: white;
-	width: 250px;
-	min-height: 300px;
-	padding-top: 90px;
+    background-color: white;
+    width: 250px;
+    min-height: 300px;
+    padding-top: 90px;
 }
 .peopledata2 p span{
-	font-size: 16px;
-	font-weight: 500;
-	
+    font-size: 16px;
+    font-weight: 500;
+    
 }.peopledata2 p{
-	display: block;
-	width: 95%;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+    display: block;
+    width: 95%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .peopledata2 .goodsspan{
-	display:inline-block;
-	width:35px;
-	height:35px;
-	text-align:center;
-	padding-top:7px;
-	background-color: #0888E6;
-	margin-left: 20px;
-	border-radius: 50%;
-	color: white;
+    display:inline-block;
+    width:35px;
+    height:35px;
+    text-align:center;
+    padding-top:7px;
+    background-color: #0888E6;
+    margin-left: 20px;
+    border-radius: 50%;
+    color: white;
 }
 
 
@@ -309,79 +309,79 @@
 /*商品详情和卖方一言*/
 
 .situation {
-	padding-bottom: 30px;
-	width: 1140px;
+    padding-bottom: 30px;
+    width: 1140px;
 }
 .situation ul{
-	width: 1100px;
+    width: 1100px;
 }
 .situation .sidiv{
-	width: 1100px;
-	height: auto;
-	background-color: white;
-	min-height: 200px;
-	border-left: 1px solid #DDDDDD;
-	border-right: 1px solid #DDDDDD;
-	border-bottom: 1px solid #DDDDDD;
-	padding: 20px 30px;
-	font-size: 18px;
+    width: 1100px;
+    height: auto;
+    background-color: white;
+    min-height: 200px;
+    border-left: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+    padding: 20px 30px;
+    font-size: 18px;
 }
 .situation .post_img{
-	width: 900px;
-	height: auto;
-	margin: 10px;
-	transition: .6s;
+    width: 900px;
+    height: auto;
+    margin: 10px;
+    transition: .6s;
 }
 
 
 /*商品评论*/
 
 .post_a{
-	color: #999999;
-	margin-left: 700px;
-	line-height: 30px;
+    color: #999999;
+    margin-left: 700px;
+    line-height: 30px;
 }
 .post_hr{
-	display: inline-block;
-	border-width:2px;
-	margin: 0px;
-	padding: 1px;
-	width: 100%;
+    display: inline-block;
+    border-width:2px;
+    margin: 0px;
+    padding: 1px;
+    width: 100%;
 }
 .post_div7{
-	width:100%;
-	margin: 10px;
-	padding: 0px;
+    width:100%;
+    margin: 10px;
+    padding: 0px;
 }
 .post_img1{
-	margin: 20px 0 10px 0;
-	border-radius: 50%;
-	text-align: center;
-	width: 100px;
-	height: 100px;
+    margin: 20px 0 10px 0;
+    border-radius: 50%;
+    text-align: center;
+    width: 100px;
+    height: 100px;
 }
 .post_p1{
-	font-size: 16px;
-	font-weight: 600;
-	font-family: "新宋体";
-	text-align: center;
-	width: 150px;
-	overflow: hidden;
-	white-space: nowrap;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "新宋体";
+    text-align: center;
+    width: 150px;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .post_div8{
-	font-size: 16px;
-	font-weight: 600;
-	font-family: "宋体";
-	word-wrap: break-word;
-	overflow: hidden;
-	margin: 30px 0 50px 0;
-	padding:0 40px 0 0;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "宋体";
+    word-wrap: break-word;
+    overflow: hidden;
+    margin: 30px 0 50px 0;
+    padding:0 40px 0 0;
 }
 .post_div3{
-	text-align: right;
-	margin-right: 40px;
-	font-size: 15px;
-	font-weight: 100;
-	color: #666666;
+    text-align: right;
+    margin-right: 40px;
+    font-size: 15px;
+    font-weight: 100;
+    color: #666666;
 }
