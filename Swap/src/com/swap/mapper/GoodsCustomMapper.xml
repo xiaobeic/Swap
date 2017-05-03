@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.swap.mapper.GoodsCustomMapper" >
+  <resultMap id="BaseResultMap" type="com.swap.po.GoodsCustom" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="goodsname" property="goodsname" jdbcType="VARCHAR" />
+    <result column="quality" property="quality" jdbcType="VARCHAR" />
+    <result column="intention" property="intention" jdbcType="VARCHAR" />
+    <result column="uploadtime" property="uploadtime" jdbcType="TIMESTAMP" />
+    <result column="viewnumber" property="viewnumber" jdbcType="INTEGER" />
+    <result column="originalprice" property="originalprice" jdbcType="INTEGER" />
+    <result column="evaluation" property="evaluation" jdbcType="INTEGER" />
+    <result column="sellerspeak" property="sellerspeak" jdbcType="VARCHAR" />
+    <result column="bigclassify" property="bigclassify" jdbcType="VARCHAR" />
+    <result column="smallclassify" property="smallclassify" jdbcType="VARCHAR" />
+    <result column="goodsmessage" property="goodsmessage" jdbcType="VARCHAR" />
+    <result column="goodsimg1" property="goodsimg1" jdbcType="VARCHAR" />
+    <result column="goodsimg2" property="goodsimg2" jdbcType="VARCHAR" />
+    <result column="goodsimg3" property="goodsimg3" jdbcType="VARCHAR" />
+    <result column="shop_id" property="shopId" jdbcType="INTEGER" />
+    <result column="gcid" property="gcid" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, goodsname, quality, intention, uploadtime, viewnumber, originalprice, evaluation, 
+    sellerspeak, bigclassify, smallclassify, goodsmessage, goodsimg1, goodsimg2, goodsimg3, 
+    shop_id
+  </sql>
+  <select id="selectAllByShopId" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from goods
+    where shop_id = #{shopId,jdbcType=INTEGER}
+  </select>
+  <select id="goodsCollectionselectAll" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    SELECT 
+    goods.*,goods_collection.id gcid
+    FROM goods,goods_collection 
+    WHERE goods.id=goods_collection.good_id AND goods_collection.user_id=#{userId,jdbcType=INTEGER}
+  </select>
+  
+   <select id="selectAllBygoodsname" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from goods
+    where bigclassify= #{bigclassifys,jdbcType=VARCHAR} limit #{startPos},#{pageSize}
+  </select>
+  <!-- 取得记录的总数 -->
+    <select id="getBigclassifysCount" resultType="Integer"  parameterType="java.lang.String">
+      SELECT COUNT(*) FROM goods  where bigclassify= #{bigclassifys,jdbcType=VARCHAR}
+    </select>
+    
+    
+  <select id="selectBygoodsname" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from goods
+    where smallclassify= #{smallclassify,jdbcType=VARCHAR} AND bigclassify= #{bigclassify,jdbcType=VARCHAR} limit #{startPos},#{pageSize}
+  </select>
+ <!-- 取得记录的总数 -->
+    <select id="getSmallclassifysCount" resultType="Integer">
+      SELECT COUNT(*) FROM goods  where bigclassify= #{bigclassify,jdbcType=VARCHAR} AND smallclassify= #{smallclassify,jdbcType=VARCHAR}
+    </select>
+  
+</mapper>

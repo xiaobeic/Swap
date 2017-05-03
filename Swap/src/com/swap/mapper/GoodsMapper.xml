@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.swap.mapper.GoodsMapper" >
+  <resultMap id="BaseResultMap" type="com.swap.po.Goods" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="goodsname" property="goodsname" jdbcType="VARCHAR" />
+    <result column="quality" property="quality" jdbcType="VARCHAR" />
+    <result column="intention" property="intention" jdbcType="VARCHAR" />
+    <result column="uploadtime" property="uploadtime" jdbcType="TIMESTAMP" />
+    <result column="viewnumber" property="viewnumber" jdbcType="INTEGER" />
+    <result column="originalprice" property="originalprice" jdbcType="INTEGER" />
+    <result column="evaluation" property="evaluation" jdbcType="INTEGER" />
+    <result column="sellerspeak" property="sellerspeak" jdbcType="VARCHAR" />
+    <result column="bigclassify" property="bigclassify" jdbcType="VARCHAR" />
+    <result column="smallclassify" property="smallclassify" jdbcType="VARCHAR" />
+    <result column="goodsmessage" property="goodsmessage" jdbcType="VARCHAR" />
+    <result column="goodsimg1" property="goodsimg1" jdbcType="VARCHAR" />
+    <result column="goodsimg2" property="goodsimg2" jdbcType="VARCHAR" />
+    <result column="goodsimg3" property="goodsimg3" jdbcType="VARCHAR" />
+    <result column="shop_id" property="shopId" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, goodsname, quality, intention, uploadtime, viewnumber, originalprice, evaluation, 
+    sellerspeak, bigclassify, smallclassify, goodsmessage, goodsimg1, goodsimg2, goodsimg3, 
+    shop_id
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from goods
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from goods
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.swap.po.Goods" >
+    insert into goods (id, goodsname, quality, 
+      intention, uploadtime, viewnumber, 
+      originalprice, evaluation, sellerspeak, 
+      bigclassify, smallclassify, goodsmessage, 
+      goodsimg1, goodsimg2, goodsimg3, 
+      shop_id)
+    values (#{id,jdbcType=INTEGER}, #{goodsname,jdbcType=VARCHAR}, #{quality,jdbcType=VARCHAR}, 
+      #{intention,jdbcType=VARCHAR}, #{uploadtime,jdbcType=TIMESTAMP}, #{viewnumber,jdbcType=INTEGER}, 
+      #{originalprice,jdbcType=INTEGER}, #{evaluation,jdbcType=INTEGER}, #{sellerspeak,jdbcType=VARCHAR}, 
+      #{bigclassify,jdbcType=VARCHAR}, #{smallclassify,jdbcType=VARCHAR}, #{goodsmessage,jdbcType=VARCHAR}, 
+      #{goodsimg1,jdbcType=VARCHAR}, #{goodsimg2,jdbcType=VARCHAR}, #{goodsimg3,jdbcType=VARCHAR}, 
+      #{shopId,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.swap.po.Goods" >
+      <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+          select last_insert_id()
+      </selectKey>
+    insert into goods
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="goodsname != null" >
+        goodsname,
+      </if>
+      <if test="quality != null" >
+        quality,
+      </if>
+      <if test="intention != null" >
+        intention,
+      </if>
+      <if test="uploadtime != null" >
+        uploadtime,
+      </if>
+      <if test="viewnumber != null" >
+        viewnumber,
+      </if>
+      <if test="originalprice != null" >
+        originalprice,
+      </if>
+      <if test="evaluation != null" >
+        evaluation,
+      </if>
+      <if test="sellerspeak != null" >
+        sellerspeak,
+      </if>
+      <if test="bigclassify != null" >
+        bigclassify,
+      </if>
+      <if test="smallclassify != null" >
+        smallclassify,
+      </if>
+      <if test="goodsmessage != null" >
+        goodsmessage,
+      </if>
+      <if test="goodsimg1 != null" >
+        goodsimg1,
+      </if>
+      <if test="goodsimg2 != null" >
+        goodsimg2,
+      </if>
+      <if test="goodsimg3 != null" >
+        goodsimg3,
+      </if>
+      <if test="shopId != null" >
+        shop_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="goodsname != null" >
+        #{goodsname,jdbcType=VARCHAR},
+      </if>
+      <if test="quality != null" >
+        #{quality,jdbcType=VARCHAR},
+      </if>
+      <if test="intention != null" >
+        #{intention,jdbcType=VARCHAR},
+      </if>
+      <if test="uploadtime != null" >
+        #{uploadtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="viewnumber != null" >
+        #{viewnumber,jdbcType=INTEGER},
+      </if>
+      <if test="originalprice != null" >
+        #{originalprice,jdbcType=INTEGER},
+      </if>
+      <if test="evaluation != null" >
+        #{evaluation,jdbcType=INTEGER},
+      </if>
+      <if test="sellerspeak != null" >
+        #{sellerspeak,jdbcType=VARCHAR},
+      </if>
+      <if test="bigclassify != null" >
+        #{bigclassify,jdbcType=VARCHAR},
+      </if>
+      <if test="smallclassify != null" >
+        #{smallclassify,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsmessage != null" >
+        #{goodsmessage,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsimg1 != null" >
+        #{goodsimg1,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsimg2 != null" >
+        #{goodsimg2,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsimg3 != null" >
+        #{goodsimg3,jdbcType=VARCHAR},
+      </if>
+      <if test="shopId != null" >
+        #{shopId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.swap.po.Goods" >
+    update goods
+    <set >
+      <if test="goodsname != null" >
+        goodsname = #{goodsname,jdbcType=VARCHAR},
+      </if>
+      <if test="quality != null" >
+        quality = #{quality,jdbcType=VARCHAR},
+      </if>
+      <if test="intention != null" >
+        intention = #{intention,jdbcType=VARCHAR},
+      </if>
+      <if test="uploadtime != null" >
+        uploadtime = #{uploadtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="viewnumber != null" >
+        viewnumber = #{viewnumber,jdbcType=INTEGER},
+      </if>
+      <if test="originalprice != null" >
+        originalprice = #{originalprice,jdbcType=INTEGER},
+      </if>
+      <if test="evaluation != null" >
+        evaluation = #{evaluation,jdbcType=INTEGER},
+      </if>
+      <if test="sellerspeak != null" >
+        sellerspeak = #{sellerspeak,jdbcType=VARCHAR},
+      </if>
+      <if test="bigclassify != null" >
+        bigclassify = #{bigclassify,jdbcType=VARCHAR},
+      </if>
+      <if test="smallclassify != null" >
+        smallclassify = #{smallclassify,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsmessage != null" >
+        goodsmessage = #{goodsmessage,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsimg1 != null" >
+        goodsimg1 = #{goodsimg1,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsimg2 != null" >
+        goodsimg2 = #{goodsimg2,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsimg3 != null" >
+        goodsimg3 = #{goodsimg3,jdbcType=VARCHAR},
+      </if>
+      <if test="shopId != null" >
+        shop_id = #{shopId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.swap.po.Goods" >
+    update goods
+    set goodsname = #{goodsname,jdbcType=VARCHAR},
+      quality = #{quality,jdbcType=VARCHAR},
+      intention = #{intention,jdbcType=VARCHAR},
+      uploadtime = #{uploadtime,jdbcType=TIMESTAMP},
+      viewnumber = #{viewnumber,jdbcType=INTEGER},
+      originalprice = #{originalprice,jdbcType=INTEGER},
+      evaluation = #{evaluation,jdbcType=INTEGER},
+      sellerspeak = #{sellerspeak,jdbcType=VARCHAR},
+      bigclassify = #{bigclassify,jdbcType=VARCHAR},
+      smallclassify = #{smallclassify,jdbcType=VARCHAR},
+      goodsmessage = #{goodsmessage,jdbcType=VARCHAR},
+      goodsimg1 = #{goodsimg1,jdbcType=VARCHAR},
+      goodsimg2 = #{goodsimg2,jdbcType=VARCHAR},
+      goodsimg3 = #{goodsimg3,jdbcType=VARCHAR},
+      shop_id = #{shopId,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

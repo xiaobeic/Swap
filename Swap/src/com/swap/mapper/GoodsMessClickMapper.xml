@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.swap.mapper.GoodsMessClickMapper" >
+  <resultMap id="BaseResultMap" type="com.swap.po.GoodsMessClick" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="clicktime" property="clicktime" jdbcType="TIMESTAMP" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="gdmess_id" property="gdmessId" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, clicktime, user_id, gdmess_id
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from goods_message_click
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from goods_message_click
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.swap.po.GoodsMessClick" >
+    insert into goods_message_click (id, clicktime, user_id, 
+      gdmess_id)
+    values (#{id,jdbcType=INTEGER}, #{clicktime,jdbcType=TIMESTAMP}, #{userId,jdbcType=INTEGER}, 
+      #{gdmessId,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.swap.po.GoodsMessClick" >
+    insert into goods_message_click
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="clicktime != null" >
+        clicktime,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="gdmessId != null" >
+        gdmess_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="clicktime != null" >
+        #{clicktime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="gdmessId != null" >
+        #{gdmessId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.swap.po.GoodsMessClick" >
+    update goods_message_click
+    <set >
+      <if test="clicktime != null" >
+        clicktime = #{clicktime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="gdmessId != null" >
+        gdmess_id = #{gdmessId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.swap.po.GoodsMessClick" >
+    update goods_message_click
+    set clicktime = #{clicktime,jdbcType=TIMESTAMP},
+      user_id = #{userId,jdbcType=INTEGER},
+      gdmess_id = #{gdmessId,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

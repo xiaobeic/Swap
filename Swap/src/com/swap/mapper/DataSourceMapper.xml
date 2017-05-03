@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.swap.mapper.DataSourceMapper">
+    <resultMap id="BaseResultMap" type="com.swap.po.Goods">
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="goodsname" property="goodsname" jdbcType="VARCHAR" />
+        <result column="intention" property="intention" jdbcType="VARCHAR" />
+        <result column="bigclassify" property="bigclassify" jdbcType="VARCHAR" />
+        <result column="smallclassify" property="smallclassify"
+            jdbcType="VARCHAR" />
+    </resultMap>
+
+    <select id="selectAllGoods" resultMap="BaseResultMap">
+        select id,goodsname,intention,bigclassify,smallclassify
+        from goods
+    </select>
+
+    <select id="searchGoodsInfo" resultType="com.swap.po.Goods">
+        select *
+        from goods
+        where id in
+        <foreach collection="list" item="goodsId" index="index" open="(" close=")" separator=",">
+            #{goodsId}
+        </foreach>
+    </select>
+</mapper>

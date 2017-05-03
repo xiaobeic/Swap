@@ -1,0 +1,289 @@
+body{
+	background-color: #eee;
+}
+a:hover,
+a:link,
+a:active {
+	text-decoration: none;
+}
+
+/*所有商品信息*/
+.many_news{
+	width: 1245px;
+	height: 50px;
+	background-color:#FF5511;
+	margin-top: 0px;
+	padding-left:50px;
+}
+.manyblurb li{
+	width: 80px;
+	height: 50px;
+	float: left;
+	list-style:none;
+	text-align: center;
+	line-height: 50px;
+	font-size: 20px;
+	
+}
+.manyblurb a{
+	color: #ffffff;
+	text-decoration: none;
+}
+.manyblurb a:hover{
+	color: #ffffff;
+	text-decoration: none;
+}
+.manyblurb li:hover{
+	background-color: #F58400;
+	box-shadow: 1px 1px #F58400;
+}
+
+.manyblurb li.active {
+	background-color: #F58400;
+}
+
+.allblurb {
+	width: 1245px;
+	height: 350px;
+	padding: 0px;
+	margin-bottom: 20px;
+	background-color: #DDDDDD;
+}
+
+
+/*所有商品名称*/
+
+.allblurb .allblurb_1 {
+	width: 240px;
+	height: 350px;
+	overflow-y: auto;
+	float: left;
+	padding: 10px;
+	margin-top: 1px;
+	border-left: 1px solid #eee;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	background-color: #FF5511;
+	-webkit-border-radius: 0% 0% 2%  2%;  
+}
+
+.allblurb_1 span {
+	padding:5px 10px 0px 10px;
+	font-size: 15px;
+	font-weight: 900;
+	line-height: 30px;
+	float: left;
+	overflow-x: hidden;
+}
+
+.allblurb_1 a {
+	color: white;
+}
+
+.allblurb_1 a:hover {
+	color: #077ACE;
+}
+
+
+
+
+/*轮播图-*/
+
+.allblurb .allblurb_2 {
+	position: relative;
+	width: 780px;
+	height: 350px;
+	float: left;
+	margin-left: 1px;
+	overflow: hidden;
+}
+
+.allblurb_21 img {
+	width: 780px;
+	height: 350px;
+}
+
+.allblurb_2 ul.allblurb_21 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.allblurb_2 ul.allblurb_21 li {
+	position: absolute;
+	margin-top: 0px;
+}
+
+.allblurb_2 ul.allblurb_21 li a {
+	line-height: 0px;
+	display: block;
+}
+
+.allblurb_2 .allblurb_211,
+.allblurb_2 .allblurb_212 {
+	position: absolute;
+	top: 50%;
+	z-index: 2;
+	width: 40px;
+	height: 70px;
+	margin-top: -35px;
+	border-radius: 3px;
+	opacity: .15;
+	background: red;
+	text-indent: -9999px;
+	background-repeat: no-repeat;
+	transition: opacity .2s linear 0s;
+}
+
+.allblurb_2 .allblurb_211 {
+	left: 5px;
+	background: url(../img/arrow-left.png) #000 50% no-repeat;
+}
+
+.allblurb_2 .allblurb_212 {
+	right: 5px;
+	background: url(../img/arrow-right.png) #000 50% no-repeat;
+}
+
+.allblurb_22 {
+	position: absolute;
+	left: 50%;
+	bottom: 12px;
+	z-index: 30;
+}
+
+.allblurb_22 ul {
+	height: 20px;
+	padding: 0 4px;
+	border-radius: 8px;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.allblurb_22 ul li {
+	float: left;
+	height: 12px;
+	margin: 4px 4px;
+}
+
+.allblurb_22 ul li em {
+	display: block;
+	width: 12px;
+	height: 12px;
+	border-radius: 100%;
+	background-color: #FFFFFF;
+	text-indent: -9999px;
+	cursor: pointer;
+}
+
+.allblurb_22 ul li.current em {
+	background-color: #fe6500;
+}
+
+.allblurb_22 ul li em:hover {
+	background-color: #fe6500;
+}
+.allblurb_3{
+	float: left;
+	width: 220px;
+	height: 350px;
+	padding-left: 4px;
+}
+.allblurb_3 img{
+	width: 220px;
+	height: 350px;
+}
+/*所有商品的信息*/
+.allblurb1{
+	width: 1245px;
+	margin-top: 10px;
+	background-color: #eee;
+	border: 1px solid #DDDDDD;
+	padding: 0px;
+	padding-bottom: 20px;
+}
+
+.allblurb1_1{
+	width: 230px;
+	float: left;
+	margin-left:15px;
+	margin-top: 15px;
+	margin-bottom: 0px;
+}
+.allblurb1_11{
+  overflow:hidden;
+  height: 180px;
+  width: 220px;
+}
+.allblurb1_11 img{
+	padding-left:-20px;
+	height: 180px;
+	width: 220px;
+  transition:.6s;
+  -moz-transition:.6s;
+  -webkit-transition:.6s;
+  -o-transition:.6s;
+ 
+}
+.allblurb1_11:hover img{
+  transform:scale(1.1);
+  -webkit-transform:scale(1.1);
+}
+.goods_info_div1{
+	width: 240px;
+	float: left;
+	padding-top: 10px;
+}	
+.goods_info_div1 p {
+	height: 20px;
+	display: block;
+	margin-left: 10px;
+	width: 95%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.goods_info_div1 p span {
+	font-size: 17px;
+	font-weight: 600;
+	font-family: "仿宋";
+}
+.goods_info_div1 p span:hover {
+	font-size: 18px;
+	font-weight: 700;
+}
+.treasure_info_div2 span{
+	margin-left: 10px;
+	margin-bottom: 8px;
+	color: #0088CC;
+}
+.treasure_info_div2 span i{
+	margin-left: -8px;
+}
+.treasure_info_div3 span{
+	margin-left: 10px;
+	margin-right:5px;
+	margin-bottom: 8px;
+	color: #0088CC;
+}
+.shopman_span2 {
+	color: #5E5E5E;
+}
+
+.shopman_span3 {
+	color: #F58400;
+}
+.rest{
+	width: 100%;
+	float: left;
+	background-color: white;
+	color:#aaa;
+	line-height:300px;
+	text-align:center;
+	font-size: 30px;
+	margin-bottom: -20px;
+}

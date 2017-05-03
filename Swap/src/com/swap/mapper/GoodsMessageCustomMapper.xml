@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.swap.mapper.GoodsMessageCustomMapper" >
+  <resultMap id="BaseResultMap" type="com.swap.po.GoodsMessageCustom" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="message" property="message" jdbcType="VARCHAR" />
+    <result column="publishtime" property="publishtime" jdbcType="TIMESTAMP" />
+    <result column="goods_id" property="goodsId" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="headimg" property="headimg" jdbcType="VARCHAR" />
+    <result column="clickNumber" property="clickNumber" jdbcType="INTEGER" />
+  </resultMap>
+ 
+  <select id="goodsMessageSelect" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+      SELECT goods_message.*,users.username,users.headimg,
+    (SELECT COUNT(id) FROM goods_message_click WHERE goods_message_click.gdmess_id=goods_message.id) clickNumber 
+    FROM goods_message,users
+    WHERE goods_message.user_id=users.id AND goods_message.goods_id=#{id,jdbcType=INTEGER}  ORDER BY publishtime DESC
+  </select>
+  
+</mapper>

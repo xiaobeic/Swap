@@ -1,0 +1,379 @@
+a:hover {
+	text-decoration: none;
+}
+
+
+/*登录注册超链接*/
+
+.login-a {
+	margin: 5px;
+}
+
+.login-a:hover {
+	text-decoration: none;
+}
+
+.forget-a {
+	color: #555;
+}
+
+.forget-a:hover {
+	text-decoration: none;
+	color: #1B9AF7;
+}
+
+
+/*右下角流动框*/
+
+.fixed-btn {
+	position: fixed;
+	right: 1%;
+	bottom: 2%;
+	width: 40px;
+	border: 1px solid #eee;
+	background-color: white;
+	font-size: 25px;
+}
+
+.fixed-btn a {
+	display: inline-block;
+	width: 40px;
+	height: 30px;
+	text-align: center;
+}
+
+
+/*
+ * 设置导航条样式
+ */
+
+.my-nav {
+	background-color: #000000;
+	opacity: 0.8;
+}
+
+
+/*
+ * 搜索框
+ */
+
+.searchbox {
+	width: 550px;
+	height: 80px;
+	margin: 20px auto 0 140px;
+	float: left;
+}
+
+.searchbox ul {
+	height: 35px;
+	width: 500px;
+	list-style: none;
+	margin-left: -10px;
+	padding-top: 10px;
+}
+
+.searchbox ul li {
+	float: left;
+}
+
+.searchbox ul li a {
+	float: left;
+	border-radius: 2px 2px 0 0;
+	line-height: 35px;
+	padding: 0 20px;
+	text-decoration: none;
+	color: #000;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.searchbox ul li .style1 {
+	background-color: #F58400;
+	color: #fff
+}
+.searchbodys{
+	margin-top: -10px;
+}
+.searchbodys input {
+	outline: none;
+	height: 40px;
+	line-height: 40px;
+	width: 400px;
+	padding: 0 10px;
+	float: left;
+	margin: 0px;
+	border-radius: 3px 0 0 3px;
+}
+
+.searchbodys .inp {
+	border: #F58400 3px solid
+}
+
+.searchbodys .searchBut {
+	float: left;
+	border: 0;
+	margin-left: -5px;
+	height: 40px;
+	width: 100px;
+	color: #FFF;
+	line-height: 40px;
+	text-align: center;
+	overflow: hidden;
+	background-color: #F58400;
+}
+
+
+/*物品大分类*/
+
+.home_goods {
+	float: left;
+	width: 250px;
+	min-height: 200px;
+	margin-right: 20px;
+	text-align: center;
+	overflow: hidden;
+}
+
+.home_goods a img {
+	width: 240px;
+	height: 140px;
+	transition: .6s;
+	-moz-transition: .6s;
+	-webkit-transition: .6s;
+	-o-transition: .6s;
+	line-height: 1em;
+}
+
+.home_goods:hover a img {
+	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+}
+
+.home_goods a span {
+	display: block;
+	padding-top: 15px;
+	font-size: 18px;
+	font-weight: 800;
+	color: #000000;
+	font-family: "新宋体";
+}
+
+/*
+ * 登入后样式
+ */
+
+li {
+	list-style: none;
+}
+
+.l {
+	float: left;
+}
+
+.r {
+	float: right;
+}
+
+.g-user-card .card-links {
+	position: relative;
+	height: 60px;
+	line-height: 60px;
+}
+
+.g-user-card .card-links a,
+.g-user-card .card-links .split {
+	position: absolute;
+}
+
+.g-user-card .card-links .split {
+	left: 150px;
+	top: 0;
+	margin-top: 15px;
+	width: 1px;
+	height: 30px;
+	background-color: #edf1f2;
+}
+
+.g-user-card .card-links a {
+	left: 20px;
+	top: 0;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.g-user-card .card-links a:hover {
+	font-weight: bold;
+	font-size: medium;
+}
+
+.g-user-card .card-links .my-sns {
+	left: 172px;
+}
+
+.g-user-card .card-links {
+	margin-bottom: -1px;
+	border-bottom: 1px solid #edf1f2;
+}
+
+.g-user-card .card-sets {
+	padding: 0 20px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 12px;
+}
+
+.g-user-card .card-sets a {
+	color: #787d82;
+	text-decoration: none;
+}
+
+.g-user-card .card-sets a:hover {
+	color: #f01400;
+	text-decoration: none;
+}
+
+#login-area {
+	float: left;
+	margin-left: 5px;
+}
+
+.clearfix:after {
+	content: '\0020';
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+.logined > li {
+	float: left;
+}
+
+.logined li > a {
+	display: block;
+	color: #787d82;
+	text-align: center;
+	text-decoration: none;
+	-webkit-transition: background-color 0.2s;
+	-moz-transition: background-color 0.2s;
+	transition: background-color 0.2s;
+}
+
+.logined li > a:hover {
+	color: #fff;
+	background-color: #363c41;
+	text-decoration: none;
+}
+
+.set_btn {
+	right: 0px;
+}
+
+.set_btn a.hover {
+	background-color: #363d40;
+	text-decoration: none;
+}
+
+.set_btn img {
+	border-radius: 22px;
+	border: 1px solid #adb0b1;
+}
+
+.user-card-box {
+	position: relative;
+}
+
+.user-card-box:hover .g-user-card {
+	visibility: visible;
+}
+
+.user-card-box:hover .user-card-item img {
+	border-color: #f22c1a;
+}
+
+#header-avator:hover {
+	background-color: transparent;
+}
+
+.myspace_remind {
+	width: 10px;
+	height: 10px;
+	background: url(/static/img/space-remind.png) no-repeat 0 0;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.g-user-card {
+	position: absolute;
+	right: 0;
+	top: 100%;
+	width: 300px;
+	padding-top: 10px;
+	visibility: hidden;
+	z-index: 1000;
+}
+
+.g-user-card .card-inner {
+	background-color: #fff;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.g-user-card .card-top {
+	padding-left: 100px;
+	height: 100px;
+	background-color: #FF8800 ;
+	color: #fff;
+}
+
+.g-user-card .card-top img {
+	float: left;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	margin: 20px 0 0 -82px;
+}
+
+.g-user-card .card-top .name {
+	display: block;
+	padding-top: 30px;
+	font-size: 18px;
+}
+
+
+.text-ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.g-user-card .card-sets {
+	padding: 0 20px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 12px;
+}
+
+.g-user-card .card-sets a {
+	color: #787d82;
+	text-decoration: none;
+}
+
+.g-user-card .card-sets a:hover {
+	color: black;
+	text-decoration: none;
+}
+
+.g-user-card .card-arr {
+	position: absolute;
+	right: 23px;
+	top: 2px;
+	border-width: 0 7px 8px 7px;
+	border-color: transparent transparent #f01400 transparent;
+	border-style: solid;
+}

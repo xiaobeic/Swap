@@ -1,0 +1,439 @@
+.personCenter_left {
+	width: 220px;
+	float: left;
+	margin-left: 60px;
+	margin-top: 50px;
+	margin-bottom: 60px;
+	border: none;
+	background-color: #eee;
+	-webkit-border-radius: 2%;
+	background-image: url(../img/backPerson.png);
+	background-repeat: no-repeat;
+}
+
+
+/**
+ *左上部 
+ */
+
+.personCenter_left_top {
+	border: 1px solid #e3e3e3;
+	background-color: white;
+	-webkit-border-radius: 2%;
+	background-image: url(../img/backPerson.png);
+	background-position-y: -15px;
+	background-repeat: no-repeat;
+}
+
+.personCenter_left_top img {
+	border-radius: 50%;
+	width: 80px;
+	height: 80px;
+	margin-left: 70px;
+	margin-top: 30px;
+}
+
+.personCenter_left_top .divspan1 {
+	font-size: 16px;
+	font-weight: 700;
+	width: 220px;
+	text-align: center;
+	margin-top: 7px;
+	margin-bottom: 10px;
+}
+
+.personCenter_left_top .divspan2 {
+	font-size: 10px;
+	font-weight: 400;
+	width: 210px;
+	height: 25px;
+	text-align: center;
+	padding-left: 12px;
+	margin-top: 5px;
+	padding-right: 12px;
+	overflow: hidden;
+}
+
+.personCenter_left_top a {
+	margin: 5px;
+	text-decoration: none;
+}
+
+
+/**
+ *左下部 
+ */
+
+.personCenter_left_bottom {
+	margin-top: 15px;
+	border: 1px solid #e3e3e3;
+	background-color: white;
+	-webkit-border-radius: 2%;
+}
+
+.personCenter_left_bottom .bottom_div {
+	height: 50px;
+	border-radius: 2%;
+}
+
+.personCenter_left_bottom .bottom_div p {
+	padding-left: 40px;
+	padding-top: 13px;
+}
+
+.personCenter_left_bottom .bottom_div a {
+	text-decoration: none;
+	color: #14191e;
+	font-size: 20px;
+}
+
+.personCenter_left_bottom .bottom_div a:hover {
+	color: #337AB7;
+	font-size: 21px;
+}
+
+
+/*
+ * 右部我的店铺
+ */
+
+.personCenter_right01 {
+	width: 750px;
+	float: left;
+	background-color: #eee;
+	margin-left: 40px;
+	margin-top: 50px;
+	margin-bottom: 60px;
+	padding: 0px;
+}
+
+.shoop_info_div0 {
+	border: 1px solid #DDDDDD;
+	width: 240px;
+	height: auto;
+	background-color: white;
+	float: left;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+.goods_info_imgs {
+	padding: 4px;
+	float: left;
+	overflow: hidden;
+}
+
+.goods_info_imgs img {
+	transition: .6s;
+	-moz-transition: .6s;
+	-webkit-transition: .6s;
+	line-height: 1em;
+}
+
+.goods_info_imgs:hover img {
+	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+}
+
+.goods_info_div1 {
+	width: 240px;
+	float: left;
+	padding-top: 10px;
+	padding-left: 15px;
+}
+
+.goods_info_div1 p {
+	height: 20px;
+	margin-left: 5px;
+	display: block;
+	width: 95%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.goods_info_div1 p span {
+	font-size: 17px;
+	font-weight: 600;
+	font-family: "仿宋";
+}
+
+.goods_info_div1 p span:hover {
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.goods_info_div2 .span1 {
+	color: #0088CC;
+	width: 110px;
+	margin-bottom: 8px;
+}
+.goods_info_div2 .span2 {
+	color: #0088CC;
+	width: 70px;
+	margin-bottom: 8px;
+}
+
+.goods_info_div2 span i {
+	color: #868686;
+}
+
+.personCenter_right01 .formLabel {
+	font-size: 18px;
+	font-weight: 700;
+	margin-top: 5px;
+}
+
+
+/*
+ * 右部我的宝贝收藏
+ */
+
+.treasure_info_div2 span {
+	margin-left: 15px;
+	margin-bottom: 8px;
+	color: #0088CC;
+}
+
+.shopman_span2 {
+	color: #5E5E5E;
+}
+
+.shopman_span3 {
+	color: #F58400;
+}
+
+
+/*
+ * 右部我的店铺收藏
+ */
+.personCenter_right02 {
+	width: 841px;
+	float: left;
+	background-color: #eee;
+	margin-left: 40px;
+	margin-top: 50px;
+	margin-bottom: 60px;
+	padding: 0px;
+}
+.shop_info_head {
+	width: 100%;
+	height: 30px;
+	padding-top: 2px;
+	border-radius: 2px 2px 0 0;
+	background-image: linear-gradient(to bottom, #357EBD, #088EF0);
+	font-size: 20px;
+	text-align: center;
+	color: white;
+}
+.shop_info_div0{
+	width: 100%;
+	margin-top: 20px;
+	background-color: white;
+	min-height: 190px;
+}
+.shop_info_div1{
+	float:left;
+	width: 205px;
+	height:190px;
+	border: 1px solid #DDDDDD;
+}
+.shop_info_div2{
+	float: left;
+	width: 100px;
+	padding: 5px;
+}
+.shop_info_div2 img{
+	width: 90px;
+	height: 90px;
+}
+.shop_info_div3{
+	float: left;
+	width: 100px;
+	margin-top: 10px;
+	padding-left: 5px;
+}
+.shop_info_div4{
+	float: left;
+	width: 200px;
+	color: #5E5E5E;
+	margin-left: 10px;
+}
+.shop_info_div5{
+	float:left;
+	margin-left: 10px;
+	padding: 5px;
+	border: 1px solid #DDDDDD;
+}
+.shop_info_div5 p img{
+	width: 190px;
+	height: 160px;
+}
+.shop_info_div5 p{
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+
+/*
+ * 右部我的消息
+ */
+.personCenter_right03{
+	width: 700px;
+	float: left;
+	background-color: #eee;
+	margin-left: 40px;
+	margin-top: 50px;
+	margin-bottom: 60px;
+	padding: 0px;
+}
+.message_info_div0{
+	width: 540px;
+	height: 85px;
+	padding: 10px;
+	margin-top: 10px;
+}
+.message_info_div0:hover{
+	height: 86px;
+	background-color: #E5E5E5;
+}
+.message_info_div1{
+	width: 70px;
+	float: left;
+}
+.message_info_div1 a img{
+	width: 70px;
+	height: 70px;
+}
+.message_info_div2{
+	float: left;
+	width: 350px;
+	margin-left: 20px;
+	margin-right: 30px;
+}
+.message_info_span0{
+	font-size: 16px;
+	font-weight: 700;
+}
+.message_info_span1{
+	font-size: 14px;
+	font-weight:400;
+	display: block;
+	width: 350px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.message_info_div3{
+	display:none;
+}
+.message_info_div4{
+	display: block;
+	float: left;
+	width: 50px;
+	text-align: right;
+	margin-top: 5px;
+	padding-right: 20px;
+}
+.message_info_hr0{
+	margin-left: 10px;
+	margin-top: 0px;
+	margin-bottom:0px;
+	width: 530px;
+	border-top:1px dotted   #C0C0C0;"
+}
+.nav-counter {
+  color: white;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+  background: #3b8de2;
+  border: 1px solid #215a96;
+  border-radius: 10px;
+  line-height:15px;
+   padding: 0 8px;
+   margin:3px 10px 10px 0;
+   float: right;
+   background-image: -webkit-linear-gradient(top, #67a7e9, #2580df);
+  background-image: -moz-linear-gradient(top, #67a7e9, #2580df);
+  background-image: -o-linear-gradient(top, #67a7e9, #2580df);
+  background-image: linear-gradient(to bottom, #67a7e9, #2580df);
+}
+
+
+/**
+ *右部系统消息样式 
+ */
+.SysMess_info_div0{
+	float: left;
+	width:600px;
+	margin-top: 20px;
+	border: 1px solid #dbdbdb;
+	padding: 10px;
+	color: #0f0f0f;
+	background: #fbfbfb;
+	font-size: 16px;
+	border-radius: 4px;
+	cursor: hand;
+}
+.SysMess_info_span0{
+	margin-right: 5px; 
+	float: right;
+	font-size: 13px;
+	font-weight: 100;
+	color: #666666;
+	margin-top: 5px;
+}
+.SysMess_info_div1{
+	display:none;
+}
+.SysMess_info_div2{
+	display:inline-block;
+	background: white;
+	padding:20px 10px 5px 15px;
+	width:600px;
+	color: #0f0f0f;
+	border: 1px solid #dbdbdb;
+	border-radius: 8px;
+	margin-bottom: 40px;
+}
+/*
+ * 右部账户设置 ---上传图片样式
+ */
+.imageBox
+{
+    position: relative;
+    height: 300px;
+    width: 300px;
+    border:1px solid #aaa;
+    background: #fff;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    cursor:move;
+}
+
+.imageBox .thumbBox
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    margin-top: -100px;
+    margin-left: -100px;
+    box-sizing: border-box;
+    border: 1px solid rgb(102, 102, 102);
+    box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.5);
+    background: none repeat scroll 0% 0% transparent;
+}
+
+.imageBox .spinner
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    line-height: 400px;
+    background: rgba(0,0,0,0.7);
+}
