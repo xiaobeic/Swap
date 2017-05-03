@@ -1,87 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:mvc="http://www.springframework.org/schema/mvc"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
-		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
-	
-	<!-- 配置自动扫描的包-->
-	<context:component-scan base-package="com.swap.controller"></context:component-scan>	
-	
-	<!-- 静态资源解析 -->
-	<!-- <mvc:resources location="/js/" mapping="/js/**"/>
-	<mvc:resources location="/css/" mapping="/css/**"/>
-	<mvc:resources location="/img/" mapping="/img/**"/>
-	<mvc:resources location="/fonts/" mapping="/fonts/**"/> -->
-	
-	<!-- 使用自定义转换器需要配置如下 -->
-	<mvc:annotation-driven conversion-service="conversionService" validator="localValidator"></mvc:annotation-driven>
-	
-	<!-- 配置 ConversionService -->
-	<bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
-		<property name="converters">
-			<set>
-				<!-- 日期类型的转换器 -->
-				<bean class="com.swap.converter.CustomDateConverter"/>
-			</set>
-		</property>	
-	</bean>
-	
-	
-	<!-- 校验器 -->
-	<!--需在mvc:annotation-driven中注入  -->
-	<bean id="localValidator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
-		<!-- hibernate校验器 -->
-		<property name="providerClass" value="org.hibernate.validator.HibernateValidator"></property>
-	<!-- 	指定校验使用的资源文件，在文件中配置校验的错误信息，如果不指定默认使用ClassPath下的ValidatorMessage.properties -->
-		<property name="validationMessageSource" ref="messageSource"></property>
-	</bean>
-	
-	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
-		<!-- 资源文件名 -->
-		<property name="basenames">
-			<list>
-				<value>classpath:CustomValidationMessages</value>
-			</list>
-		</property>
-		<!-- 资源文件编码格式 -->
-		<property name="fileEncodings" value="utf-8"></property>
-		<!-- 资源文件内容缓存时间，单位秒 -->
-		<property name="cacheSeconds" value="120"></property>
-	</bean>
-	
-	
-	<!-- 配置视图解析器：如何把handler方法返回值解析为实际的物理视图-->
-	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/view/"></property>
-		<property name="suffix" value=".jsp"></property>
-	</bean>
-	
-	
-	<!-- 全局异常处理器 
-		只要实现HandlerExceptionResolver接口就是全局异常处理器
-	-->
-	<bean class="com.swap.exception.CustomExceptionResolver"></bean>
-	
-	
-	<!-- 配置MultipartResolver管理文件上传-->
-	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-		<property name="defaultEncoding" value="UTF-8"></property>
-		<property name="maxUploadSize" value="5242880"></property>
-	</bean>
-	
-	<!-- 配置自定义打拦截器,注意mvc:interceptors后有s -->
-	<mvc:interceptors>
-	 		<mvc:interceptor>
-	 			<!-- 全局拦截器 -->
-				<mvc:mapping path="/**"/>
-				<bean class="com.swap.interceptors.LoginInterceptor"></bean>
-	 		</mvc:interceptor>
-	 </mvc:interceptors>
-	
-	
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+    
+    <!-- 配置自动扫描的包-->
+    <context:component-scan base-package="com.swap.controller"></context:component-scan>    
+    
+    <!-- 静态资源解析 -->
+    <!-- <mvc:resources location="/js/" mapping="/js/**"/>
+    <mvc:resources location="/css/" mapping="/css/**"/>
+    <mvc:resources location="/img/" mapping="/img/**"/>
+    <mvc:resources location="/fonts/" mapping="/fonts/**"/> -->
+    
+    <!-- 使用自定义转换器需要配置如下 -->
+    <mvc:annotation-driven conversion-service="conversionService" validator="localValidator"></mvc:annotation-driven>
+    
+    <!-- 配置 ConversionService -->
+    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        <property name="converters">
+            <set>
+                <!-- 日期类型的转换器 -->
+                <bean class="com.swap.converter.CustomDateConverter"/>
+            </set>
+        </property>    
+    </bean>
+    
+    
+    <!-- 校验器 -->
+    <!--需在mvc:annotation-driven中注入  -->
+    <bean id="localValidator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+        <!-- hibernate校验器 -->
+        <property name="providerClass" value="org.hibernate.validator.HibernateValidator"></property>
+    <!--     指定校验使用的资源文件，在文件中配置校验的错误信息，如果不指定默认使用ClassPath下的ValidatorMessage.properties -->
+        <property name="validationMessageSource" ref="messageSource"></property>
+    </bean>
+    
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <!-- 资源文件名 -->
+        <property name="basenames">
+            <list>
+                <value>classpath:CustomValidationMessages</value>
+            </list>
+        </property>
+        <!-- 资源文件编码格式 -->
+        <property name="fileEncodings" value="utf-8"></property>
+        <!-- 资源文件内容缓存时间，单位秒 -->
+        <property name="cacheSeconds" value="120"></property>
+    </bean>
+    
+    
+    <!-- 配置视图解析器：如何把handler方法返回值解析为实际的物理视图-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/view/"></property>
+        <property name="suffix" value=".jsp"></property>
+    </bean>
+    
+    
+    <!-- 全局异常处理器 
+        只要实现HandlerExceptionResolver接口就是全局异常处理器
+    -->
+    <bean class="com.swap.exception.CustomExceptionResolver"></bean>
+    
+    
+    <!-- 配置MultipartResolver管理文件上传-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="UTF-8"></property>
+        <property name="maxUploadSize" value="5242880"></property>
+    </bean>
+    
+    <!-- 配置自定义打拦截器,注意mvc:interceptors后有s -->
+    <mvc:interceptors>
+             <mvc:interceptor>
+                 <!-- 全局拦截器 -->
+                <mvc:mapping path="/**"/>
+                <bean class="com.swap.interceptors.LoginInterceptor"></bean>
+             </mvc:interceptor>
+     </mvc:interceptors>
+    
+    
 </beans>
 
 
