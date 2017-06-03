@@ -15,8 +15,10 @@ import org.springframework.validation.FieldError;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.swap.po.Page;
 import com.swap.po.ShopsCustom;
 import com.swap.po.Users;
 import com.swap.po.UsersCustom;
@@ -144,7 +146,69 @@ public class UsersController {
         return "index";
     }
 
+    /**
+    * <p>Title:adminQueryUsers </p>
+    * <p>Description: </p>
+    * @author Shane
+    * @date 2017年5月27日
+     */
+    @RequestMapping("adminQueryUsers")
+    public ModelAndView adminQueryUsers(Integer pageNow) throws Exception {
+        ModelAndView modelAndView = new ModelAndView();
 
+        //分页查询所有用户
+        Page page = null;
+        int totalCount = usersService.getUsersCount();
+        if (pageNow != null) {
+            page = new Page(totalCount, pageNow);
+        } else {
+            page = new Page(totalCount, 1);
+        }
+        page.setPageSize(10);
+        if (pageNow != null && pageNow > page.getTotalPageCount()) {
+            page.setPageNow(page.getTotalPageCount());
+        }
 
+        List<Users> users = usersService.adminQueryUsers(page);
+        modelAndView.setViewName("userManagement");
+        modelAndView.addObject("users", users);
+        modelAndView.addObject("page", page);
+        return modelAndView;
+    }
+
+    /**
+    * <p>Title:adminDeleteUser </p>
+    * <p>Description: </p>
+    * @author Shane
+    * @date 2017年5月31日
+     */
+    @RequestMapping("adminDeleteUser")
+    public String adminDeleteUser(Integer userId,HttpSession session) throws Exception {
+    	int status = usersService.deleteByPrimaryKey(userId);
+    	if (status == 1) {
+    		session.setAttribute("opeMessage", "删除成功");
+    	} else {
+    		session.setAttribute("opeMessage", "删除失败");
+    	}
+    	return "redirect:/users/adminQueryUsers.action";
+    }
+
+    /**
+    * <p>Title:adminSearchUsers </p>
+    * <p>Description: </p>
+    * @author Shane
+    * @date 2017年5月31日
+     */
+    @RequestMapping("adminSearchUsers")
+    public ModelAndView adminSearchUsers(String keyword) throws Exception {
+    	ModelAndView modelAndView = new ModelAndView();
+
+    	List<Users> users = usersService.adminSearchUsers(keyword);
+        modelAndView.setViewName("userManagement");
+        modelAndView.addObject("users", users);
+        modelAndView.addObject("keyword", keyword);
+
+    	return modelAndView;
+    }
 
 }

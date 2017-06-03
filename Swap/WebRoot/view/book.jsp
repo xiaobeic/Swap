@@ -136,9 +136,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         </div>
                     </div>
                 
+                <div style="float: right;margin-right: 15px;margin-top: 5px;padding: 10px 0px;color: white;">
+	                <a id="adminlogin" href="${pageContext.request.contextPath}/view/adminlogin.jsp">管理员登入</a>
+	            </div>
                 <%    
                     }
                 %>
+                
 
                 </div>
             </div>

@@ -5,8 +5,10 @@ import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.swap.mapper.AdminsMapper;
 import com.swap.mapper.ShopsMapper;
 import com.swap.mapper.UsersMapper;
+import com.swap.po.Admins;
 import com.swap.po.Shops;
 import com.swap.po.Users;
 import com.swap.service.LoginService;
@@ -22,7 +24,9 @@ public class LoginServiceImpl implements LoginService {
     @Autowired
     private UsersMapper usersMapper;
     @Autowired
-    private ShopsMapper     shopsMapper;
+    private AdminsMapper adminsMapper;
+    @Autowired
+    private ShopsMapper shopsMapper;
     /**
     * <p>Description:登入验证 </p>
     * @param username
@@ -65,5 +69,21 @@ public class LoginServiceImpl implements LoginService {
         }
 
     }
+
+	@Override
+	public int adminLogin(String adminname, String password) throws Exception {
+		Admins admin = adminsMapper.selectByName(adminname);
+        if(admin==null){
+            return 0;//用户名不存在返回0
+        }
+        else{
+            if(admin.getPassword().equals(password)){
+                return admin.getId();//登入成功返回2
+            }
+            else{
+                return -1;//密码不正确返回1
+            }
+        }
+	}
 
 }

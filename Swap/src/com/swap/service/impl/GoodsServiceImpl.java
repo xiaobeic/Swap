@@ -109,4 +109,29 @@ public class GoodsServiceImpl implements GoodsService {
         return goodsCustomMapper.getSmallclassifysCount(bigclassify,smallclassify);
     }
 
+	/* (non-Javadoc)
+	 * @see com.swap.service.GoodsService#getGoodsCount()
+	 */
+	@Override
+	public int getGoodsCount() {
+		return goodsMapper.getGoodsCount();
+	}
+
+	/* (non-Javadoc)
+	 * @see com.swap.service.GoodsService#adminQueryGoods(com.swap.po.Page)
+	 */
+	@Override
+	public List<Goods> adminQueryGoods(Page page) {
+		return goodsMapper.adminQueryGoods(page);
+	}
+
+	/* (non-Javadoc)
+	 * @see com.swap.service.GoodsService#adminSearchGoods(java.lang.String)
+	 */
+	@Override
+	public List<Goods> adminSearchGoods(String keyword) {
+		// TODO Auto-generated method stub
+		return goodsMapper.adminSearchGoods(keyword);
+	}
+
 }

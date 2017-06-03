@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.swap.mapper.GoodsCustomMapper;
 import com.swap.mapper.ShopsCustomMapper;
 import com.swap.mapper.ShopsMapper;
+import com.swap.po.Page;
 import com.swap.po.Shops;
 import com.swap.po.ShopsCollection;
 import com.swap.po.ShopsCustom;
@@ -24,7 +25,7 @@ public class ShopsServiceImpl implements ShopsService {
     @Override
     public int deleteByPrimaryKey(Integer id) throws Exception {
         // TODO Auto-generated method stub
-        return 0;
+        return shopsMapper.deleteByPrimaryKey(id);
     }
 
     @Override
@@ -90,5 +91,30 @@ public class ShopsServiceImpl implements ShopsService {
             return shop.getId();
         }
     }
+
+	/* (non-Javadoc)
+	 * @see com.swap.service.ShopsService#getShopsCount()
+	 */
+	@Override
+	public int getShopsCount() throws Exception {
+		return shopsCustomMapper.getShopsCount();
+	}
+
+	/* (non-Javadoc)
+	 * @see com.swap.service.ShopsService#adminQueryShops(com.swap.po.Page)
+	 */
+	@Override
+	public List<ShopsCustom> adminQueryShops(Page page) throws Exception {
+		return shopsCustomMapper.adminQueryShops(page);
+	}
+
+	/* (non-Javadoc)
+	 * @see com.swap.service.ShopsService#adminSearchShop(java.lang.String)
+	 */
+	@Override
+	public List<ShopsCustom> adminSearchShop(String keyword) {
+		// TODO Auto-generated method stub
+		return shopsCustomMapper.adminSearchShop(keyword);
+	}
 
 }

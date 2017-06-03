@@ -108,6 +108,7 @@
                 <li><a href="#" data-toggle="modal"
                     data-target="#about-modal">关于</a></li>
             </ul>
+            
             <%
                 /* session身份为空的时候  显示登入界面   否则显示登入后状态 */
                                     if(session.getAttribute("username")!=null){
@@ -165,11 +166,12 @@
                         data-toggle="modal" data-target="#login-modal">注册</a>
                 </div>
             </div>
-
-            <%
+			<div style="float: right;margin-right: 15px;margin-top: 5px;padding: 10px 0px;color: white;">
+                <a id="adminlogin" href="${pageContext.request.contextPath}/view/adminlogin.jsp">管理员登入</a>
+            </div>            <%
                 }
             %>
-
+            
         </div>
     </div>
     </nav>

@@ -10,6 +10,9 @@
   <sql id="Base_Column_List" >
     id, username, password, headimg
   </sql>
+  <select id="getUsersCount" resultType="java.lang.Integer">
+    select count(id) from users
+  </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
@@ -88,4 +91,15 @@
       headimg = #{headimg,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <select id="adminQueryUsers" resultMap="BaseResultMap" parameterType="com.swap.po.Page">
+    select 
+    <include refid="Base_Column_List" />
+    from users limit #{startPos },#{pageSize }
+  </select>
+  <select id="adminSearchUsers" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from users 
+    where id like CONCAT('%',#{keyword },'%') or username like CONCAT('%',#{keyword },'%')
+  </select>
 </mapper>

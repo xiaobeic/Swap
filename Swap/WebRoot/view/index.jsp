@@ -147,10 +147,14 @@
                         data-target="#login-modal">注册</a>
                 </div>
             </div>
-
+			<div style="float: right;margin-right: 15px;margin-top: 5px;padding: 10px 0px;color: white;">
+                <a id="adminlogin" href="${pageContext.request.contextPath}/view/adminlogin.jsp" class="navbar-link">管理员登入</a>
+            </div>
             <%
                 }
             %>
+            
+            
         </div>
     </div>
     </nav>

@@ -12,9 +12,11 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.swap.po.GoodsCustom;
+import com.swap.po.Page;
 import com.swap.po.Shops;
 import com.swap.po.ShopsCollection;
 import com.swap.po.ShopsCustom;
@@ -106,4 +108,71 @@ public class ShopsController {
 
         return "personaCenter3";
     }
+
+
+    /**
+    * <p>Title:adminQueryShops </p>
+    * <p>Description: </p>
+    * @author Shane
+    * @date 2017年5月29日
+     */
+    @RequestMapping("adminQueryShops")
+    public ModelAndView adminQueryShops(Integer pageNow) throws Exception{
+        ModelAndView modelAndView = new ModelAndView();
+
+      //分页查询所有店铺
+        Page page = null;
+        int totalCount = shopsService.getShopsCount();
+        if (pageNow != null) {
+            page = new Page(totalCount, pageNow);
+        } else {
+            page = new Page(totalCount, 1);
+        }
+        page.setPageSize(10);
+        if (pageNow != null && pageNow > page.getTotalPageCount()) {
+            page.setPageNow(page.getTotalPageCount());
+        }
+
+        List<ShopsCustom> shopsCustoms = shopsService.adminQueryShops(page);
+        modelAndView.setViewName("shopManagement");
+        modelAndView.addObject("shopsCustoms", shopsCustoms);
+        modelAndView.addObject("page", page);
+        return modelAndView;
+    }
+
+
+    /**
+     * <p>Title:adminDeleteShop </p>
+     * <p>Description: </p>
+     * @author Shane
+     * @date 2017年5月31日
+      */
+     @RequestMapping("adminDeleteShop")
+     public String adminDeleteShop(Integer shopId,HttpSession session) throws Exception {
+     	int status = shopsService.deleteByPrimaryKey(shopId);
+     	if (status == 1) {
+     		session.setAttribute("opeMessage", "删除成功");
+     	} else {
+     		session.setAttribute("opeMessage", "删除失败");
+     	}
+     	return "redirect:/shops/adminQueryShops.action";
+     }
+
+     /**
+      * <p>Title:adminSearchShop </p>
+      * <p>Description: </p>
+      * @author Shane
+      * @date 2017年5月31日
+       */
+      @RequestMapping("adminSearchShop")
+      public ModelAndView adminSearchShop(String keyword) throws Exception {
+      	ModelAndView modelAndView = new ModelAndView();
+
+      	  List<ShopsCustom> shopsCustoms = shopsService.adminSearchShop(keyword);
+          modelAndView.setViewName("shopManagement");
+          modelAndView.addObject("shopsCustoms", shopsCustoms);
+          modelAndView.addObject("keyword", keyword);
+
+      	return modelAndView;
+      }
 }

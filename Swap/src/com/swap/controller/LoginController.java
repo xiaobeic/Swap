@@ -19,9 +19,11 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.swap.po.Admins;
 import com.swap.po.Users;
 import com.swap.po.UsersCustom;
 import com.swap.service.LoginService;
+import com.swap.validate.AdminsGroup1;
 import com.swap.validate.UsersGroup1;
 import com.swap.validate.UsersGroup2;
 
@@ -181,5 +183,47 @@ public class LoginController {
         }
         model.addAttribute("registerInfo", "注册成功，请登入");
         return "login";
+    }
+
+    @RequestMapping("/adminLogin")
+    public String adminLogin(HttpServletResponse httpServletResponse,HttpServletRequest httpServletRequest, HttpSession session,
+            Model model,@Validated(value={AdminsGroup1.class}) Admins admins, BindingResult bindingResult)throws Exception{
+        if(bindingResult.hasErrors()){
+            //将错误信息传到页面
+            List<ObjectError> allErrors = bindingResult.getAllErrors();
+            model.addAttribute("allErrors", allErrors);
+            //验证不通过重新转向登入界面
+            return "adminlogin";
+        }
+
+        //调用service进行用户身份验证
+        int loginstatu=loginService.adminLogin(admins.getAdminname(), admins.getPassword());
+        if(loginstatu==-1){
+            model.addAttribute("loginError", "密码不正确");
+            return "adminlogin";
+        }
+        else if(loginstatu==0){
+            model.addAttribute("loginError", "用户名不存在");
+            return "adminlogin";
+        }
+        else{
+            //登入成功，在Session中保存用户身份信息
+            session.setAttribute("adminname", admins.getAdminname());
+            session.setAttribute("adminid", loginstatu);
+            return "redirect:/users/adminQueryUsers.action";
+        }
+    }
+
+    /**
+     * 退出
+     * @param session
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping("/adminlogout")
+    public String adminlogout(HttpSession session)throws Exception{
+        //清除session
+        session.invalidate();
+        return "adminlogin";
     }
 }

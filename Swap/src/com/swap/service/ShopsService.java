@@ -2,6 +2,7 @@ package com.swap.service;
 
 import java.util.List;
 
+import com.swap.po.Page;
 import com.swap.po.Shops;
 import com.swap.po.ShopsCollection;
 import com.swap.po.ShopsCustom;
@@ -28,5 +29,11 @@ public interface ShopsService {
     public List<ShopsCollection> shopsCollectionSelect(Integer userid)throws Exception;
 
     public int updateReputationvalue(Shops record)throws Exception;
+
+    public int getShopsCount()throws Exception;
+
+	public List<ShopsCustom> adminQueryShops(Page page)throws Exception;
+
+	public List<ShopsCustom> adminSearchShop(String keyword);
 
 }

@@ -1,0 +1,114 @@
+@CHARSET "UTF-8";
+
+table.pp {
+	position:absolute;
+	left: 600px;
+	top: 450px;
+}
+
+button.ww,input.ww {
+	size: 20;
+	border-style: inset;
+	border-width: thick;
+	padding: 0px;
+	border-radius:25px;
+}
+
+img{
+	position: absolute;
+	left: 800px;
+	top: 100px;
+}
+
+
+
+
+/* 圆框 */
+
+.demo,.img,.border,.mask {
+	width: 300px;
+	height: 300px;
+}
+
+.demo {
+	display: block;
+	position: absolute;
+	left: 100px;
+	top: 210px;
+	margin: 50px auto;
+}
+
+.img {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	border-radius: 50%; /* 设置图片变园 */
+}
+
+.border {
+	position: absolute;
+	border: 10px solid #072256;
+	border-left-color: #E07514;
+	border-right-color: blue;
+	border-bottom-color: green;
+	border-top-color: lime;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	-webkit-transition: all .5s ease-in;
+	transition: all .5s ease-in;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.mask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	-webkit-transition: all .5s ease-in;
+	transition: all .5s ease-in;
+	color: rgba(255, 255, 255, 0);
+}
+
+.demo:hover .mask {
+	background-color: rgba(0, 0, 0, 0.5); /* 设置背景颜色 */
+	color: rgba(255, 255, 255, 1);
+}
+
+.demo:hover .border {
+	-webkit-transform: rotate(360deg); /* 设置边缘框转动角度 */
+	transform: rotate(360deg);
+}
+
+.info {
+	position: absolute;
+	width: 100%; /* 设置改div的宽度为外边框的100% */
+	top: 50%; /* 使字体居中 */
+	text-align: center; /* 使字体居中 */
+	-webkit-transform: translateY(-50%);
+}
+
+
+
+/* 圆点闪烁style */
+.spinner{
+		  position: absolute;
+		  left:600px;
+		  top:20px;
+		  width:20px;
+		  height:20px;
+		  background-color:green;
+		  border-radius:100%;
+		  margin: 100px auto;
+		  -webkit-animation:fadeOut 1.0s infinite ease-in-out;
+		  animation:fadeOut 1.0s infinite ease-in-out;
+		}
+		@-webkit-keyframes fadeOut{
+		  from {-webkit-transform:scale(0.0);}
+		  to {-webkit-transform:scale(2.0);opacity:0;}
+		}
+		@keyframes fadeOut{
+		  form{transform:scale(0.0);}
+		  to{transform:scale(2.0);opacity:0;}
+}

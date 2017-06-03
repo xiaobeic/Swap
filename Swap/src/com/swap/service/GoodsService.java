@@ -30,4 +30,10 @@ public interface GoodsService {
     public int  getBigclassifysCount(String bigclassifys);
 
     public int  getSmallclassifysCount(String bigclassify,String smallclassify);
+
+	public int getGoodsCount();
+
+	public List<Goods> adminQueryGoods(Page page);
+
+	public List<Goods> adminSearchGoods(String keyword);
 }

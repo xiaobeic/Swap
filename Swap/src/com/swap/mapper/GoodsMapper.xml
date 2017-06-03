@@ -24,6 +24,20 @@
     sellerspeak, bigclassify, smallclassify, goodsmessage, goodsimg1, goodsimg2, goodsimg3, 
     shop_id
   </sql>
+  <select id="adminQueryGoods" resultMap="BaseResultMap" parameterType="com.swap.po.Page">
+    select * from goods limit #{startPos },#{pageSize } 
+  </select>
+  <select id="getGoodsCount" resultType="java.lang.Integer" >
+    select count(*) from goods
+  </select>
+  <select id="adminSearchGoods" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from goods 
+    where id like CONCAT('%',#{keyword },'%') or goodsname like CONCAT('%',#{keyword },'%')
+    or bigclassify like CONCAT('%',#{keyword },'%') or smallclassify like CONCAT('%',#{keyword },'%')
+    or shop_id like CONCAT('%',#{keyword },'%')
+  </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />

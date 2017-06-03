@@ -7,6 +7,15 @@ a:active {
     text-decoration: none;
 }
 
+#adminlogin {
+    color: #9d9d9d;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+}
+#adminlogin:HOVER {
+    color: white;
+}
+
 /*所有商品信息*/
 .many_news{
     width: 1245px;

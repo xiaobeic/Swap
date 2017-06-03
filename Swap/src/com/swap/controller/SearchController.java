@@ -45,7 +45,7 @@ public class SearchController {
                 return "searchResultEmpty";
             }
         }
-        else{
+        else if (shopsInfo!=null&&shopsInfo!="") {
             //根据用户名查询出商店id，然后跳转到SellerCenController
             int shopsId = shopsService.selectByShopname(shopsInfo);
             if(shopsId>0){
@@ -56,6 +56,8 @@ public class SearchController {
                 return "searchResultEmpty";
             }
 
+        } else {
+            return "searchResultEmpty";
         }
     }
 }

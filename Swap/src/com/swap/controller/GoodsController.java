@@ -19,10 +19,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.swap.po.Goods;
 import com.swap.po.GoodsCustom;
+import com.swap.po.Page;
 import com.swap.po.ShopsCustom;
 import com.swap.search.SearchGoods;
 import com.swap.service.GoodsService;
@@ -180,4 +182,72 @@ public class GoodsController {
         model.addAttribute("goods",goods);
         return "personaCenter2";
     }
+
+
+    /**
+    * <p>Title:adminQueryGoods </p>
+    * <p>Description: </p>
+    * @author Shane
+    * @date 2016年5月31日
+     */
+    @RequestMapping("adminQueryGoods")
+    public ModelAndView adminQueryUsers(Integer pageNow, HttpSession session) throws Exception {
+        ModelAndView modelAndView = new ModelAndView();
+
+        //分页查询所有用户
+        Page page = null;
+        int totalCount = goodsService.getGoodsCount();
+        if (pageNow != null) {
+            page = new Page(totalCount, pageNow);
+        } else {
+            page = new Page(totalCount, 1);
+        }
+        page.setPageSize(10);
+        if (pageNow != null && pageNow > page.getTotalPageCount()) {
+            page.setPageNow(page.getTotalPageCount());
+        }
+
+        List<Goods> goods = goodsService.adminQueryGoods(page);
+        modelAndView.setViewName("goodsManagement");
+        modelAndView.addObject("goods", goods);
+        modelAndView.addObject("page", page);
+        return modelAndView;
+    }
+
+
+    /**
+     * <p>Title:adminDeleteShop </p>
+     * <p>Description: </p>
+     * @author Shane
+     * @date 2017年5月31日
+      */
+     @RequestMapping("adminDeleteGood")
+     public String adminDeleteGood(Integer goodId,HttpSession session) throws Exception {
+     	int status = goodsService.deleteByPrimaryKey(goodId);
+     	if (status == 1) {
+     		session.setAttribute("opeMessage", "删除成功");
+     	} else {
+     		session.setAttribute("opeMessage", "删除失败");
+     	}
+     	return "redirect:/goods/adminQueryGoods.action";
+     }
+
+
+     /**
+      * <p>Title:adminSearchGoods </p>
+      * <p>Description: </p>
+      * @author Shane
+      * @date 2017年5月31日
+       */
+      @RequestMapping("adminSearchGoods")
+      public ModelAndView adminSearchGoods(String keyword) throws Exception {
+      	ModelAndView modelAndView = new ModelAndView();
+
+      	List<Goods> goods = goodsService.adminSearchGoods(keyword);
+          modelAndView.setViewName("goodsManagement");
+          modelAndView.addObject("goods", goods);
+          modelAndView.addObject("keyword", keyword);
+
+      	return modelAndView;
+      }
 }

@@ -16,5 +16,7 @@ import com.swap.po.Users;
 public interface LoginService {
     public int login(String username, String password) throws Exception;
 
+    public int adminLogin(String adminname, String password) throws Exception;
+
     public int insertSelective(Users record) throws Exception;
 }

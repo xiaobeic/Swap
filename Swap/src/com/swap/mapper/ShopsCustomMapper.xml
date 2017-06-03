@@ -37,8 +37,21 @@
           users.username,users.headimg,goods.id good_id,goods.goodsname,goods.goodsimg1 
   </sql>
   
+  <select id="getShopsCount" resultType="java.lang.Integer">
+      select count(*) from shops;
+  </select>
+  <select id="adminSearchShop" resultMap="ShopsCustomMapperResultMap">
+    select shops.*,users.username,users.headimg
+    from shops,users
+    where shops.id like CONCAT('%',#{keyword },'%') or shops.shopname like CONCAT('%',#{keyword },'%') 
+    or users.username like CONCAT('%',#{keyword },'%') or users.id like CONCAT('%',#{keyword },'%')
+  </select>
   <select id="userAndShopQuery" resultMap="ShopsCustomMapperResultMap" parameterType="java.lang.Integer" >
     select shops.*,users.username,users.headimg  from shops,users  where users.id=shops.user_id and users.id = #{userid,jdbcType=INTEGER}
+  </select>
+  
+  <select id="adminQueryShops" resultMap="ShopsCustomMapperResultMap" parameterType="com.swap.po.Page" >
+    select shops.*,users.username,users.headimg  from shops,users  where users.id=shops.user_id limit #{startPos },#{pageSize }
   </select>
   
   <select id="userAndShopSelect" resultMap="ShopsCustomMapperResultMap" parameterType="java.lang.Integer" >
